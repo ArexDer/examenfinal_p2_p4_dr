@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estudiante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<form th:action="@{/matriculas/guardar}" th:object="${matriculas}" th:method="POST">
+		
+		<h1>Crear Matricula</h1>
+        <table class="table-info">
+            <tr>
+                <td class="table-success"><label>Nombre Estu:</label></td>
+                <td class="table-light"><input type="text" name="cd" /></td>
+            </tr>
+            <tr>
+                <td class="table-success"><label>Cod 1:</label></td>
+                <td><input type="text" name="cod1" /></td>
+            </tr>
+            <tr>
+                <td class="table-success"><label>Cod 2:</label></td>
+                <td class="table-light"><input type="text" name="cod2" /></td>
+            </tr>
+            <tr>
+                <td class="table-success"><label>Cod 3:</label></td>
+                <td><input type="text" name="cod3" /></td>
+            </tr>
+            <tr>
+                <td class="table-success"><label>Cod 4:</label></td>
+                <td class="table-light"><input type="text" name="cod4" /></td>
+            </tr>
+            
+        </table>
+        <input class="btn btn-success" type="submit" value="Guardar" />
+    </form>
+</body>
+
+</html>
